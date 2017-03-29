@@ -42,6 +42,16 @@
 			{* User profile, login, etc, navigation menu*}
 			<div class="container-fluid">
 				<div class="row">
+					<div id="ui-library" class="navbar-collapse collapse navbar-left">
+						<a href="http://www.library.illinois.edu/">
+							<img src="{$baseUrl}/plugins/themes/iopnBootstrap/images/ui_library.png" class="img-responsive" alt="University Library, University of Illinois at Urbana-Champaign">
+						</a>
+					</div>
+				</div><!-- .row -->
+				<div class="row">
+					<div id="iopn" class="navbar-collapse collapse navbar-left">
+						<a href="https://iopn.library.illinois.edu/">Illinois Open Publishing Network</a>
+					</div>
 					<ul id="navigationUser" class="nav nav-pills tab-list pull-right" role="navigation" aria-label="{translate|escape key="common.navigation.user"}">
 						{if $isUserLoggedIn}
 							<li>

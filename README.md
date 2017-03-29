@@ -1,6 +1,6 @@
-# Bootstrap3 for OJS 3+
+# IOPN fork of Bootstrap3 for OJS 3+
 
-A community-built theme for OJS 3+ that implements Bootstrap 3 components.
+A community-built theme for OJS 3+ that implements Bootstrap 3 components, customized for the Illinois Open Publishing Network.
 
 ## Installation
 
