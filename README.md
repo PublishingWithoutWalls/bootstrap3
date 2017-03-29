@@ -4,10 +4,11 @@ A community-built theme for OJS 3+ that implements Bootstrap 3 components, custo
 
 ## Installation
 
-1. Download the [latest release](https://github.com/NateWr/bootstrap3/releases).
-2. Unpack the .zip file and move the `bootstrap3` directory to your OJS installation at `/plugins/themes/bootstrap3`.
-3. Login to the admin area of your OJS website. Browse to the Settings > Website > Plugins page and enable the Bootstrap 3 theme.
-4. Browse to the Settings > Website > Appearance page and select Bootstrap 3 from the theme option and save your change.
+1. Clone this repository.
+1. Link the directory as `iopnBootstrap`.
+1. Create an archive called `iopnBootstrap.tar.gz`.
+1. Login to the admin area of your OJS website. Browse to the Settings > Website > Plugins page and upload or upgrade the IOPN Bootstrap theme.
+1. Browse to the Settings > Website > Appearance page and select IOPN Bootstrap 3 from the theme option and save your change.
 
 You can now see the Bootstrap 3 theme on your website. Go back to the Settings > Website > Appearance page (or refresh the page if it is still open) to view options to switch to any of the bundled Bootstrap 3 themes.
 
