@@ -59,7 +59,7 @@ class IopnBootstrapThemePlugin extends ThemePlugin {
 			}
 		}
 		$bootstrapTheme = $this->getOption('bootstrapTheme');
-		if (!empty($bootstrapTheme)) {
+		if (!empty($bootstrapTheme) && $bootstrapTheme !== 'bootstrap3') {
 			$this->addStyle('bootstrapTheme-' . $bootstrapTheme, 'styles/' . $bootstrapTheme . '.less');
 		}
 
@@ -82,6 +82,9 @@ class IopnBootstrapThemePlugin extends ThemePlugin {
 
 		// Load Bootstrap
 		$this->addScript('bootstrap', 'bootstrap/js/bootstrap.min.js');
+
+		// Add navigation menu areas for this theme
+		$this->addMenuArea(array('primary', 'user'));
 	}
 
 	/**

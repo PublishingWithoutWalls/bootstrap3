@@ -48,11 +48,18 @@
 			{/if}
 
 			{* Article Galleys *}
-			{if $article->getGalleys()}
+			{if $primaryGalleys || $supplementaryGalleys}
 				<div class="download">
-					{foreach from=$article->getGalleys() item=galley}
-						{include file="frontend/objects/galley_link.tpl" parent=$article}
-					{/foreach}
+					{if $primaryGalleys}
+						{foreach from=$primaryGalleys item=galley}
+							{include file="frontend/objects/galley_link.tpl" parent=$article purchaseFee=$currentJournal->getSetting('purchaseArticleFee') purchaseCurrency=$currentJournal->getSetting('currency')}
+						{/foreach}
+					{/if}
+					{if $supplementaryGalleys}
+						{foreach from=$supplementaryGalleys item=galley}
+							{include file="frontend/objects/galley_link.tpl" parent=$article isSupplementary="1"}
+						{/foreach}
+					{/if}
 				</div>
 			{/if}
 
@@ -139,28 +146,35 @@
 				{* Screen-reader heading for easier navigation jumps *}
 				<h2 class="sr-only">{translate key="plugins.themes.bootstrap3.article.details"}</h2>
 
-				{* Citation formats *}
-				{if $citationPlugins|@count}
-					<div class="panel panel-default citation_formats">
+				{* How to cite *}
+				{if $citation}
+					<div class="panel panel-default how-to-cite">
 						<div class="panel-heading">
 							{translate key="submission.howToCite"}
 						</div>
 						<div class="panel-body">
-
-							{* Output the first citation format *}
-							{foreach from=$citationPlugins name="citationPlugins" item="citationPlugin"}
-								<div id="citationOutput" class="citation_output">
-									{$citationPlugin->fetchCitation($article, $issue, $currentContext)}
-								</div>
-								{php}break;{/php}
-							{/foreach}
-
-							{* Output list of all citation formats *}
-							<div class="list-group citation_format_options">
-								{foreach from=$citationPlugins name="citationPlugins" item="citationPlugin"}
-									{capture assign="citationUrl"}{url page="article" op="cite" path=$article->getBestArticleId()}/{$citationPlugin->getName()|escape}{/capture}
-									<a class="list-group-item {$citationPlugin->getName()|escape}" href="{$citationUrl}"{if !$citationPlugin->isDownloadable()} data-load-citation="true"{/if} target="_blank">{$citationPlugin->getCitationFormatName()|escape}</a>
-								{/foreach}
+							<div id="citationOutput" role="region" aria-live="polite">
+								{$citation}
+							</div>
+							<div class="btn-group">
+							  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-controls="cslCitationFormats">
+							    {translate key="submission.howToCite.citationFormats"}
+									<span class="caret"></span>
+							  </button>
+							  <ul class="dropdown-menu" role="menu">
+									{foreach from=$citationStyles item="citationStyle"}
+										<li>
+											<a
+												aria-controls="citationOutput"
+												href="{url page="citationstylelanguage" op="get" path=$citationStyle.id params=$citationArgs}"
+												data-load-citation
+												data-json-href="{url page="citationstylelanguage" op="get" path=$citationStyle.id params=$citationArgsJson}"
+											>
+												{$citationStyle.title|escape}
+											</a>
+										</li>
+									{/foreach}
+							  </ul>
 							</div>
 						</div>
 					</div>
@@ -248,6 +262,45 @@
 								{/if}
 							{/if}
 							{$copyright}
+						</div>
+					</div>
+				{/if}
+
+				{* Author biographies *}
+				{assign var="hasBiographies" value=0}
+				{foreach from=$article->getAuthors() item=author}
+					{if $author->getLocalizedBiography()}
+						{assign var="hasBiographies" value=$hasBiographies+1}
+					{/if}
+				{/foreach}
+				{if $hasBiographies}
+					<div class="panel panel-default author-bios">
+						<div class="panel-heading">
+							{if $hasBiographies > 1}
+								{translate key="submission.authorBiographies"}
+							{else}
+								{translate key="submission.authorBiography"}
+							{/if}
+						</div>
+						<div class="panel-body">
+							{foreach from=$article->getAuthors() item=author}
+								{if $author->getLocalizedBiography()}
+									<div class="media biography">
+										<div class="media-body">
+											<h3 class="media-heading biography-author">
+												{if $author->getLocalizedAffiliation()}
+													{capture assign="authorName"}{$author->getFullName()|escape}{/capture}
+													{capture assign="authorAffiliation"}<span class="affiliation">{$author->getLocalizedAffiliation()|escape}</span>{/capture}
+													{translate key="submission.authorWithAffiliation" name=$authorName affiliation=$authorAffiliation}
+												{else}
+													{$author->getFullName()|escape}
+												{/if}
+											</h3>
+											{$author->getLocalizedBiography()|strip_unsafe_html}
+										</div>
+									</div>
+								{/if}
+							{/foreach}
 						</div>
 					</div>
 				{/if}
