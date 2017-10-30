@@ -44,7 +44,7 @@
 				<div class="row">
 					<div id="ui-library" class="navbar-collapse collapse navbar-left">
 						<a href="http://www.library.illinois.edu/">
-							<img src="{$baseUrl}/plugins/themes/{$pluginName|escape:"url"}/images/ui_library.png" class="img-responsive" alt="University Library, University of Illinois at Urbana-Champaign">
+							<img src="{$baseUrl}/plugins/themes/bootstrap3/images/ui_library.png" class="img-responsive" alt="University Library, University of Illinois at Urbana-Champaign">
 						</a>
 					</div>
 				</div><!-- .row -->
