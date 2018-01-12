@@ -44,7 +44,7 @@
 				<div class="row">
 					<div id="ui-library" class="navbar-collapse collapse navbar-left">
 						<a href="https://www.library.illinois.edu/">
-							<img src="{$baseUrl}/plugins/themes/iopnBootstrap/images/ui_library.png" class="img-responsive" alt="University Library, University of Illinois at Urbana-Champaign">
+							<img src="{$baseUrl}/plugins/themes/iopnBootstrap/images/ui_lib_white_trans_med.png" class="img-responsive" alt="[Block I] ILLINOIS University Library">
 						</a>
 					</div>
 				</div><!-- .row -->
