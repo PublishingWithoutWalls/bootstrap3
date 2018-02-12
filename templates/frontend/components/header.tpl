@@ -40,7 +40,7 @@
 		<header class="navbar navbar-default" id="headerNavigationContainer" role="banner">
 
 			{* User profile, login, etc, navigation menu*}
-			<div class="container-fluid">
+			<div class="container-fluid site-brand">
 				<div id="ui-library" class="navbar-left">
 					<a href="https://www.library.illinois.edu/" title="University Library">
 						<img src="{$baseUrl}/plugins/themes/iopnBootstrap/images/ui_lib_white_trans_med.png" class="img-responsive" alt="[Block I] ILLINOIS University Library">
