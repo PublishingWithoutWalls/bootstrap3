@@ -31,7 +31,7 @@
 	<div class="media-body">
 		<h3 class="media-heading">
 			<a href="{url page="article" op="view" path=$articlePath}">
-				{$article->getLocalizedTitle()|strip_unsafe_html}
+				{$article->getLocalizedFullTitle()|strip_unsafe_html}
 			</a>
 		</h3>
 
