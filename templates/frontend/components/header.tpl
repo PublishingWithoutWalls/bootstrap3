@@ -43,18 +43,18 @@
 			<div class="container-fluid site-brand">
 				<div id="ui-library" class="navbar-left">
 					<a href="https://www.library.illinois.edu/" title="University Library">
-						<img src="{$baseUrl}/plugins/themes/iopnBootstrap/images/ui_lib_white_trans_med.png" class="img-responsive" alt="[Block I] ILLINOIS University Library">
+						<img src="{$baseUrl}/plugins/themes/iopnBootstrap/images/ui_lib_white_comp_trans.png" class="img-responsive" alt="[Block I] ILLINOIS University Library">
 					</a>
 				</div>
 				<div id="iopn" class="navbar-left">
 					<a href="https://iopn.library.illinois.edu/" title="Illinois Open Publishing Network">
-						<img src="{$baseUrl}/plugins/themes/iopnBootstrap/images/iopn_white_pad.png" class="img-responsive" alt="IOPN" title="Illinois Open Publishing Network">
+						<img src="{$baseUrl}/plugins/themes/iopnBootstrap/images/iopn_white_comp_trans.png" class="img-responsive" alt="IOPN" title="Illinois Open Publishing Network">
 					</a>
 				</div>
-				<nav aria-label="{translate|escape key="common.navigation.user"}">
-					{load_menu name="user" id="navigationUser" ulClass="nav nav-pills tab-list pull-right"}
-				</nav>
 			</div><!-- .container-fluid -->
+			<nav aria-label="{translate|escape key="common.navigation.user"}">
+				{load_menu name="user" id="navigationUser" ulClass="nav nav-pills tab-list pull-right"}
+			</nav>
 
 			<div class="container-fluid">
 
