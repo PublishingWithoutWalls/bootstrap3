@@ -9,13 +9,18 @@ A community-built theme for OJS 3+ that implements Bootstrap 3 components, custo
 1. Create an archive called `iopnBootstrap.tar.gz`.
 1. Login to the admin area of your OJS website. Browse to the Settings > Website > Plugins page and upload or upgrade the IOPN Bootstrap theme.
 1. Browse to the Settings > Website > Appearance page and select IOPN Bootstrap 3 from the theme option and save your change.
-
-You can now see the Bootstrap 3 theme on your website. Go back to the Settings > Website > Appearance page (or refresh the page if it is still open) to view options to switch to any of the bundled Bootstrap 3 themes.
+=======
+1. Download the [latest release](https://github.com/NateWr/bootstrap3/releases).
+2. Unpack the .zip file and move the `bootstrap3` directory to your OJS installation at `/plugins/themes/bootstrap3`.
+3. Login to the admin area of your OJS website. Browse to the `Settings` > `Website` > `Plugins` page and enable the Bootstrap 3 theme.
+4. Browse to the `Settings` > `Website` > `Appearance` page and select Bootstrap 3 from the theme option and save your change.
 
 ## Version Compatibility
 
 Some versions of the Bootstrap3 theme are only compatible with certain releases of OJS. This release list indicates which versions are compatible.
 
+* **Bootstrap3 v3.1.2** is comptable with OJS 3.1.2.x.
+* **Bootstrap3 v3.1.1** is comptable with OJS 3.1.1.-1 to 3.1.1-4.
 * **Bootstrap3 v1.1.4** is compatible with OJS 3.1.1-1, 3.1.1-2.
 * **Bootstrap3 v1.1.3** is compatible with OJS 3.1.1-1.
 * **Bootstrap3 v1.1.2** is compatible with OJS 3.1.1.
@@ -55,6 +60,9 @@ Thanks to everyone who has contributed to this theme:
 - Dennis Müller, @dennmuel ([UB Mannheim](https://www.bib.uni-mannheim.de/))
 
 ## Changelog
+
+**3.1.1** (2019-02-25)
+* Fix: Escape author name in article summary template
 
 **1.1.4** (2018-06-12)
 * Fix: Escape user input in search template

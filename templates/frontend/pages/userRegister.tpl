@@ -28,14 +28,16 @@
 		{if $currentContext}
 
 			<fieldset class="consent">
+				{if $currentContext->getSetting('privacyStatement')}
 				{* Require the user to agree to the terms of the privacy policy *}
-				<div class="form-group optin optin-privacy">
-					<label>
-						<input type="checkbox" name="privacyConsent" value="1"{if $privacyConsent} checked="checked"{/if}>
-						{capture assign="privacyUrl"}{url router=$smarty.const.ROUTE_PAGE page="about" op="privacy"}{/capture}
-						{translate key="user.register.form.privacyConsent" privacyUrl=$privacyUrl}
-					</label>
-				</div>
+					<div class="form-group optin optin-privacy">
+						<label>
+							<input type="checkbox" name="privacyConsent" value="1"{if $privacyConsent} checked="checked"{/if}>
+							{capture assign="privacyUrl"}{url router=$smarty.const.ROUTE_PAGE page="about" op="privacy"}{/capture}
+							{translate key="user.register.form.privacyConsent" privacyUrl=$privacyUrl}
+						</label>
+					</div>
+				{/if}
 				{* Ask the user to opt into public email notifications *}
 				<div class="form-group optin optin-email">
 					<label>
@@ -65,7 +67,7 @@
 									<label>
 										{assign var="userGroupId" value=$userGroup->getId()}
 										<input type="checkbox" name="reviewerGroup[{$userGroupId}]" value="1"{if in_array($userGroupId, $userGroupIds)} checked="checked"{/if}>
-										{translate key="user.reviewerPrompt.userGroup" userGroup=$userGroup->getLocalizedName()}
+										{translate key="user.reviewerPrompt.userGroup" userGroup=$userGroup->getLocalizedName()|escape}
 									</label>
 								{/if}
 							{/foreach}
@@ -76,6 +78,29 @@
 		{/if}
 
 		{include file="frontend/components/registrationFormContexts.tpl"}
+
+		{if !$currentContext}
+			{* Require the user to agree to the terms of the privacy policy *}
+		<fieldset class="consent">
+				{if $siteWidePrivacyStatement}
+					<div class="form-group optin optin-privacy">
+						<label>
+							<input type="checkbox" name="privacyConsent[{$smarty.const.CONTEXT_ID_NONE}]" id="privacyConsent[{$smarty.const.CONTEXT_ID_NONE}]" value="1"{if $privacyConsent[$smarty.const.CONTEXT_ID_NONE]} checked="checked"{/if}>
+							{capture assign="privacyUrl"}{url router=$smarty.const.ROUTE_PAGE page="about" op="privacy"}{/capture}
+							{translate key="user.register.form.privacyConsent" privacyUrl=$privacyUrl}
+						</label>
+					</div>
+				{/if}
+
+				{* Ask the user to opt into public email notifications *}
+				<div class="form-group optin optin-email">
+					<label>
+						<input type="checkbox" name="emailConsent" value="1"{if $emailConsent} checked="checked"{/if}>
+						{translate key="user.register.form.emailConsent"}
+					</label>
+				</div>
+		</fieldset>
+		{/if}
 
 		{* recaptcha spam blocker *}
 		{if $reCaptchaHtml}

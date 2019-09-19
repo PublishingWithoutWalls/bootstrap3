@@ -68,7 +68,8 @@
 				{* Published date *}
 				{if $article->getDatePublished()}
 					<div class="list-group-item date-published">
-						<strong>{translate key="submissions.published"}</strong>
+						{capture assign=translatedDatePublished}{translate key="submissions.published"}{/capture}
+						<strong>{translate key="semicolon" label=$translatedDatePublished}</strong>
 						{$article->getDatePublished()|date_format}
 					</div>
 				{/if}
@@ -76,7 +77,7 @@
 				{* DOI (requires plugin) *}
 				{foreach from=$pubIdPlugins item=pubIdPlugin}
 					{if $pubIdPlugin->getPubIdType() != 'doi'}
-						{php}continue;{/php}
+						{continue}
 					{/if}
 					{if $issue->getPublished()}
 						{assign var=pubId value=$article->getStoredPubId($pubIdPlugin->getPubIdType())}
@@ -86,13 +87,31 @@
 					{if $pubId}
 						{assign var="doiUrl" value=$pubIdPlugin->getResolvingURL($currentJournal->getId(), $pubId)|escape}
 						<div class="list-group-item doi">
-							<strong>{translate key="plugins.pubIds.doi.readerDisplayName"}</strong>
+							{capture assign=translatedDoi}{translate key="plugins.pubIds.doi.readerDisplayName"}{/capture}
+							<strong>{translate key="semicolon" label=$translatedDoi}</strong>
 							<a href="{$doiUrl}">
 								{$doiUrl}
 							</a>
 						</div>
 					{/if}
 				{/foreach}
+
+				{* Keywords *}
+				{if !empty($keywords[$currentLocale])}
+					<div class="list-group-item keywords">
+						<strong>{capture assign=translatedKeywords}{translate key="article.subject"}{/capture}
+							{translate key="semicolon" label=$translatedKeywords}</strong>
+						<div class="">
+								<span class="value">
+									{foreach from=$keywords item=keyword}
+										{foreach name=keywords from=$keyword item=keywordItem}
+											{$keywordItem|escape}{if !$smarty.foreach.keywords.last}, {/if}
+										{/foreach}
+									{/foreach}
+								</span>
+						</div>
+					</div>
+				{/if}
 			</div>
 
 		</section><!-- .article-sidebar -->
@@ -135,9 +154,6 @@
 						</div>
 					</div>
 				{/if}
-
-				{* Keywords *}
-				{* @todo keywords not yet implemented *}
 
 				{call_hook name="Templates::Article::Main"}
 
@@ -185,7 +201,7 @@
 				{* PubIds (requires plugins) *}
 				{foreach from=$pubIdPlugins item=pubIdPlugin}
 					{if $pubIdPlugin->getPubIdType() == 'doi'}
-						{php}continue;{/php}
+						{continue}
 					{/if}
 					{if $issue->getPublished()}
 						{assign var=pubId value=$article->getStoredPubId($pubIdPlugin->getPubIdType())}
@@ -228,8 +244,8 @@
 						{translate key="issue.issue"}
 					</div>
 					<div class="panel-body">
-						<a class="title" href="{url page="issue" op="view" path=$issue->getBestIssueId($currentJournal)}">
-							{$issue->getIssueIdentification()}
+						<a class="title" href="{url|escape page="issue" op="view" path=$issue->getBestIssueId($currentJournal)}">
+							{$issue->getIssueIdentification()|escape}
 						</a>
 
 					</div>

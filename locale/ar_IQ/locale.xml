@@ -2,28 +2,28 @@
 <!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
 
 <!--
-  * plugins/themes/bootstrap3/locale/de_DE/locale.xml
+  * plugins/themes/bootstrap3/locale/ar_IQ/locale.xml
   *
-  * Copyright (c) 2014-2017 Simon Fraser University Library
-  * Copyright (c) 2003-2017 John Willinsky
+  * Copyright (c) 2014-2019 Simon Fraser University
+  * Copyright (c) 2003-2019 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings
   -->
 
-<locale name="de_DE" full_name="Deutsch (Deutschland)">
-	<message key="plugins.themes.bootstrap3.name">Bootstrap 3 Basis-Thema</message>
-	<message key="plugins.themes.bootstrap3.description">Ein Basis-Bootstrap-3-Thema für die Leseoberfläche.</message>
-	<message key="plugins.themes.bootstrap3.accessible_menu.label">Schnell zum Seiteninhalt springen</message>
-	<message key="plugins.themes.bootstrap3.accessible_menu.main_navigation">Hauptnavigation</message>
-	<message key="plugins.themes.bootstrap3.accessible_menu.main_content">Hauptinhalt</message>
-	<message key="plugins.themes.bootstrap3.accessible_menu.sidebar">Sidebar</message>
-	<message key="plugins.themes.bootstrap3.article.sidebar">Artikel-Sidebar</message>
-	<message key="plugins.themes.bootstrap3.article.main">Hauptsächlicher Artikelinhalt</message>
-	<message key="plugins.themes.bootstrap3.article.details">Artikel-Details</message>
-	<message key="plugins.themes.bootstrap3.options.bootstrapTheme.label">Bootstrap-Thema</message>
-	<message key="plugins.themes.bootstrap3.options.bootstrapTheme.description">Wählen Sie eines dieser freien Bootstrap-Themen, die die Farben und Typografie Ihrer Webseite ändern.</message>
-	<message key="plugins.themes.bootstrap3.options.bootstrapTheme.bootstrap3">Standard-Bootstrap-Thema</message>
+<locale name="ar_IQ" full_name="العربية">
+	<message key="plugins.themes.bootstrap3.name">النمط الأساسي من Bootstrap 3</message>
+	<message key="plugins.themes.bootstrap3.description">نمط إبتدائي من Bootstrap 3 لواجهة القارئ.</message>
+	<message key="plugins.themes.bootstrap3.accessible_menu.label">الانتقال المباشر إلى محتوى الصفحة</message>
+	<message key="plugins.themes.bootstrap3.accessible_menu.main_navigation">التنقل الرئيسي</message>
+	<message key="plugins.themes.bootstrap3.accessible_menu.main_content">المحتوى الرئيسي</message>
+	<message key="plugins.themes.bootstrap3.accessible_menu.sidebar">الشريط الجانبي</message>
+	<message key="plugins.themes.bootstrap3.article.sidebar">الشريط الجانبي للمقالة</message>
+	<message key="plugins.themes.bootstrap3.article.main">محتوى المقالة الرئيسي</message>
+	<message key="plugins.themes.bootstrap3.article.details">تفاصيل المقالة</message>
+	<message key="plugins.themes.bootstrap3.options.bootstrapTheme.label">نمط Bootstrap</message>
+	<message key="plugins.themes.bootstrap3.options.bootstrapTheme.description">إختر واحداً من أنماط Bootstrap المفتوحة المصدر لتغيير ألوان وتنسيقات موقعك.</message>
+	<message key="plugins.themes.bootstrap3.options.bootstrapTheme.bootstrap3">النمط الإفتراضي من Bootstrap</message>
 	<message key="plugins.themes.bootstrap3.options.bootstrapTheme.cerulean">Cerulean</message>
 	<message key="plugins.themes.bootstrap3.options.bootstrapTheme.cleanblog">Clean Blog</message>
 	<message key="plugins.themes.bootstrap3.options.bootstrapTheme.cosmo">Cosmo</message>

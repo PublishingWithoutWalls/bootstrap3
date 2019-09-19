@@ -46,7 +46,7 @@
 				<div class="meta">
 					{if $showAuthor}
 						<div class="authors">
-							{$article->getAuthorString()}
+							{$article->getAuthorString()|escape}
 						</div>
 					{/if}
 				</div>
@@ -67,7 +67,7 @@
 					{if $primaryGenreIds}
 						{assign var="file" value=$galley->getFile()}
 						{if !$galley->getRemoteUrl() && !($file && in_array($file->getGenreId(), $primaryGenreIds))}
-							{php}continue;{/php}
+							{continue}
 						{/if}
 					{/if}
 					{assign var="hasArticleAccess" value=$hasAccess}
