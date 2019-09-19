@@ -20,7 +20,7 @@
  *}
 {include file="frontend/components/header.tpl" pageTitleTranslated=$currentJournal->getLocalizedName()}
 
-<div id="main-content" class="page_index_journal" role="content">
+<div id="main-content" class="page_index_journal">
 
 	{call_hook name="Templates::Index::journal"}
 
@@ -47,7 +47,7 @@
 			<div class="media-list">
 				{foreach name=announcements from=$announcements item=announcement}
 					{if $smarty.foreach.announcements.iteration > $numAnnouncementsHomepage}
-						{php}break;{/php}
+						{break}
 					{/if}
 					{include file="frontend/objects/announcement_summary.tpl" heading="h3"}
 				{/foreach}
