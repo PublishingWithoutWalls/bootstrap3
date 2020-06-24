@@ -39,9 +39,12 @@
 			{* User profile, login, etc, navigation menu*}
 			<div class="container-fluid site-brand">
 				<div id="ui-library" class="navbar-left">
-					<a href="https://www.library.illinois.edu/" title="University Library">
-						<img src="{$baseUrl}/plugins/themes/iopnBootstrap/images/ui_lib_white_comp_trans.png" class="img-responsive" alt="[Block I] ILLINOIS University Library">
-					</a>
+                                                <img usemap="#lib-shared-header-wordmark-online__map__small" src="{$baseUrl}/templates/images/structure/library"></img>
+                                                <map name="lib-shared-header-wordmark-online__map__small">
+                                                                <area shape="rect" coords="0,0,15,20" href="https://illinois.edu" alt="Block I">
+                                                                <area shape="rect" coords="25,0,200,20" href="https://www.library.illinois.edu" alt="Illinois Library">
+                                                </map>
+
 				</div>
 				<div id="iopn" class="navbar-left">
 					<a href="https://iopn.library.illinois.edu/" title="Illinois Open Publishing Network">
