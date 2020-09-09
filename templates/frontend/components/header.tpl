@@ -38,19 +38,18 @@
 
 			{* User profile, login, etc, navigation menu*}
 			<div class="container-fluid site-brand">
-				<div id="ui-library" class="navbar-left">
-                                                <img usemap="#lib-shared-header-wordmark-online__map__small" src="{$baseUrl}/templates/images/structure/library"></img>
+                             <div class="ugrj_header">
+                                        <img usemap="#lib-shared-header-wordmark-online__map__small" src="https://ojs.library.illinois.edu/templates/images/structure/ui_lib_white_comp_trans.png">
                                                 <map name="lib-shared-header-wordmark-online__map__small">
-                                                                <area shape="rect" coords="0,0,15,20" href="https://illinois.edu" alt="Block I">
-                                                                <area shape="rect" coords="25,0,200,20" href="https://www.library.illinois.edu" alt="Illinois Library">
+                                                        <area shape="rect" coords="0,0,15,20" href="https://illinois.edu" alt="Block I">
+                                                        <area shape="rect" coords="25,0,200,20" href="https://www.library.illinois.edu" alt="Illinois Library">
                                                 </map>
+        <a class="submit" href="{$baseUrl}">
+                                        URJ @ Illinois
+                                </a>
 
-				</div>
-				<div id="iopn" class="navbar-left">
-					<a href="https://iopn.library.illinois.edu/" title="Illinois Open Publishing Network">
-						<img src="{$baseUrl}/plugins/themes/iopnBootstrap/images/iopn_white_comp_trans.png" class="img-responsive" alt="IOPN" title="Illinois Open Publishing Network">
-					</a>
-				</div>
+                                        </div>
+
 			</div><!-- .container-fluid -->
 			<nav aria-label="{translate|escape key="common.navigation.user"}">
 				{load_menu name="user" id="navigationUser" ulClass="nav nav-pills tab-list pull-right"}

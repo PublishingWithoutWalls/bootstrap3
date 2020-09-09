@@ -109,12 +109,14 @@ class IopnBootstrapThemePlugin extends ThemePlugin {
 		$bootstrapTheme = $this->getOption('bootstrapTheme');
 		if (empty($bootstrapTheme) || $bootstrapTheme === 'bootstrap3') {
 			$this->addStyle('bootstrap', 'styles/bootstrap.less');
-	                $this->addStyle('iopn_stylesheet', 'styles/iopn.css');
+	                $this->addStyle('ugrj_stylesheet', 'styles/ugrj.css');
 			$this->modifyStyle('bootstrap', ['addLessVariables' => '@icon-font-path:"' . $iconFontPath . '";']);
 		} else {
 			$this->addStyle('bootstrapTheme-' . $bootstrapTheme, 'styles/' . $bootstrapTheme . '.less');
 			$this->modifyStyle('bootstrapTheme-' . $bootstrapTheme, ['addLessVariables' => '@icon-font-path:"' . $iconFontPath . '";']);
                         $this->addStyle('iopn_stylesheet', 'styles/iopn.css');
+                        $this->addStyle('ugrj_stylesheet', 'styles/ugrj.css');
+
 
 		}
 
