@@ -2,7 +2,7 @@
 <!DOCTYPE version SYSTEM "../../../lib/pkp/dtd/pluginVersion.dtd">
 
 <!--
-  * plugins/generic/iopnBootstrap/version.xml
+  * plugins/generic/bootstrap3/version.xml
   *
   * Copyright (c) 2014-2017 Simon Fraser University Library
   * Copyright (c) 2003-2017 John Willinsky
@@ -12,10 +12,10 @@
   -->
 
 <version>
-	<application>iopnBootstrap</application>
+	<application>bootstrap3</application>
 	<type>plugins.themes</type>
-	<release>3.2.0.0</release>
-	<date>2020-02-25</date>
-	<lazy-load>0</lazy-load>
-	<class>IopnBootstrapThemePlugin</class>
+	<release>3.2.0.2</release>
+	<date>2020-08-25</date>
+	<lazy-load>1</lazy-load>
+	<class>IopnBootstrapThreeThemePlugin</class>
 </version>
