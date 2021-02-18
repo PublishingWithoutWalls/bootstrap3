@@ -11,7 +11,7 @@ msgstr ""
 "PO-Revision-Date: 2020-02-18T19:18:25+00:00\n"
 "Language: \n"
 
-msgid "plugins.themes.bootstrap3.name"
+msgid "plugins.themes.iopnBootstrap.name"
 msgstr "النمط الأساسي من Bootstrap 3"
 
 msgid "plugins.themes.bootstrap3.description"
