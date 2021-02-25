@@ -114,7 +114,7 @@ class IopnBootstrapThemePlugin extends ThemePlugin {
 		} else {
 			$this->addStyle('bootstrapTheme-' . $bootstrapTheme, 'styles/' . $bootstrapTheme . '.less');
 			$this->modifyStyle('bootstrapTheme-' . $bootstrapTheme, ['addLessVariables' => '@icon-font-path:"' . $iconFontPath . '";']);
-                        $this->addStyle('iopn_stylesheet', 'styles/iopn.css');
+                        $this->addStyle('iopn_stylesheet', 'styles/ugrj.css');
 
 		}
 
