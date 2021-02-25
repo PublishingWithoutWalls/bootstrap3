@@ -37,7 +37,6 @@
 		<header class="navbar navbar-default" id="headerNavigationContainer" role="banner">
 
 			{* User profile, login, etc, navigation menu*}
-			<div class="container-fluid site-brand">
                              <div class="ugrj_header">
                                         <img usemap="#lib-shared-header-wordmark-online__map__small" src="https://ojs.library.illinois.edu/templates/images/structure/ui_lib_white_comp_trans.png">
                                                 <map name="lib-shared-header-wordmark-online__map__small">
@@ -50,7 +49,6 @@
 
                             </div>
 
-			</div><!-- .container-fluid -->
 			<nav aria-label="{translate|escape key="common.navigation.user"}">
 				{load_menu name="user" id="navigationUser" ulClass="nav nav-pills tab-list pull-right"}
 			</nav>
