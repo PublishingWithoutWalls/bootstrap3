@@ -1,9 +1,33 @@
-# Bootstrap3 for OJS 3+
+# IOPN fork of Bootstrap3 for OJS 3+
 
-A community-built theme for OJS 3+ that implements Bootstrap 3 components.
+A community-built theme for OJS 3+ that implements Bootstrap 3 components, customized for the Illinois Open Publishing Network.
 
 ## Installation
 
+1. Clone this repository.
+2. Link the directory as `iopnBootstrap`.
+3. Create an archive called `iopnBootstrap.tar.gz`.
+4. Login to the admin area of your OJS website. Browse to the Settings > Website > Plugins page and upload or upgrade the IOPN Bootstrap theme.
+5. Browse to the Settings > Website > Appearance page and select IOPN Bootstrap 3 from the theme option and save your change.
+
+You can now see the Bootstrap 3 theme on your website. Go back to the `Settings` > `Website` > `Appearance` page (or refresh the page if it is still open) to view options to switch to any of the bundled Bootstrap 3 themes.
+
+## Version Compatibility
+
+Some versions of the Bootstrap3 theme are only compatible with certain releases of OJS. This release list indicates which versions are compatible.
+
+* **Bootstrap3 v3.1.2** is comptable with OJS 3.1.2.x.
+* **Bootstrap3 v3.1.1** is comptable with OJS 3.1.1.-1 to 3.1.1-4.
+* **Bootstrap3 v1.1.4** is compatible with OJS 3.1.1-1, 3.1.1-2.
+* **Bootstrap3 v1.1.3** is compatible with OJS 3.1.1-1.
+* **Bootstrap3 v1.1.2** is compatible with OJS 3.1.1.
+* **Bootstrap3 v1.1.1** is compatible with OJS 3.1.1.
+* **Bootstrap3 v1.1** is compatible with OJS 3.1.
+* **Bootstrap3 v1.0.2** is compatible with OJS 3.0.2.
+* **Bootstrap3 v1.0.1** is compatible with OJS 3.0.1.
+* **Bootstrap3 v1.0.0** is compatible with OJS 3.0.0.
+
+Non-customized version:
 This theme can be installed through the **Plugin Gallery** in Open Journal Systems. If it's not available in the plugin gallery, you may need to update Open Journal Systems to a compatible version.
 
 ## Project Aims
