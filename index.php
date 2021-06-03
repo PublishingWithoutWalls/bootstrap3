@@ -5,7 +5,7 @@
  */
 
 /**
- * @file plugins/themes/default/index.php
+ * @file plugins/themes/iopnBootstrap/index.php
  *
  * Copyright (c) 2014-2017 Simon Fraser University Library
  * Copyright (c) 2003-2017 John Willinsky
@@ -16,8 +16,8 @@
  *
  */
 
-require_once('BootstrapThreeThemePlugin.inc.php');
+require_once('IopnBootstrapThemePlugin.inc.php');
 
-return new BootstrapThreeThemePlugin();
+return new IopnBootstrapThemePlugin();
 
 ?>
