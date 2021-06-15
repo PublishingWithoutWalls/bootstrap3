@@ -1,0 +1,117 @@
+.iopn_header_common {
+        background-color: #192947;
+        padding-left: 15px;
+        padding-top: 5px;
+        width: 100vw;
+}
+
+
+.iopn_header_scalar {
+        padding-bottom: 10px;
+        margin-left: 0;
+ }
+
+ /*IOPN mark image*/
+#iopn_mark {
+        margin-left: 20px;
+ }
+
+/*so that Scalar collapses the native header/nav and the iopn header on scroll*/
+@media (min-width: 768px){
+        #scalarheader.short{
+                transform : translatey(-8rem);
+                -webkit-transform : translatey(-8rem);
+                -moz-transform : translatey(-8rem);
+        }
+}
+
+/*placeholders for anything needed behond common*/
+.iopn_header_omekas_s {
+        margin-left: calc(-1 * ((100vw - 100%) / 2))
+        }
+
+.iopn_header_omp {
+        margin-left: calc(-1 * ((100vw - 100%) / 2))
+
+}
+
+
+.iopn_header_ojs {
+        margin-left: calc(-1 * ((100vw - 100%) / 2))
+
+}
+
+.iopn_header_pb {
+        background-color: #192947;
+        float: left;
+        padding-top: 5px;
+        text-decoration: none;
+
+}
+
+/*special treatment for pb*/
+.a11y-toolbar {
+        background-color: #192947;
+}
+
+.column {
+        float: left;
+        width: 25%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+        content: "";
+        display: table;
+        clear: both;
+}
+@media screen and (max-width: 600px) {
+        .column {
+                width: 100%;
+        }
+}
+
+
+.footer-library {
+        background-color: #022544;
+        color: #ffffff;
+        font-family: "Open Sans", sans-serif;
+        padding: 15px;
+	width: 100%; }
+
+.footer-library_right a {
+        text-decoration: none; }
+
+footer.footer-library {
+        background-color: #022544; }
+
+.footer-library_left,
+.footer-library_right {
+        text-align: center;
+        margin-bottom: 30px; }
+
+.footer-library_right a,
+.footer-library_right a:visited,
+.footer-library_right a:hover {
+        color: #ffffff; }
+
+.footer-library_right li {
+        margin-bottom: 5px;
+        list-style: none; }
+
+.footer-library_right ul {
+        padding: 0px;
+        margin-top: 0px; }
+
+.footer-library li{
+        margin-top:-5px;}
+.footer-library p{
+        font-weight: bold}
+.footer-scalar {
+        max-width: 100%; 
+        position: relative; 
+        margin-top: 15px
+}
+.pkp_structure_content {
+	min-height: 70vh
+}

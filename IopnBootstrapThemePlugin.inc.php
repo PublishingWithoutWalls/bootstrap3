@@ -1,20 +1,20 @@
 <?php
 
 /**
- * @file plugins/themes/default/BootstrapThreeThemePlugin.inc.php
+ * @file plugins/themes/iopnBootstrap/IopnBootstrapThemePlugin.inc.php
  *
  * Copyright (c) 2014-2017 Simon Fraser University Library
  * Copyright (c) 2003-2017 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
- * @class BootstrapThreeThemePlugin
+ * @class IopnBootstrapThemePlugin
  * @ingroup plugins_themes_bootstrap3
  *
  * @brief Default theme
  */
 
 import('lib.pkp.classes.plugins.ThemePlugin');
-class BootstrapThreeThemePlugin extends ThemePlugin {
+class IopnBootstrapThemePlugin extends ThemePlugin {
 	/**
 	 * Initialize the theme
 	 *
@@ -109,10 +109,13 @@ class BootstrapThreeThemePlugin extends ThemePlugin {
 		$bootstrapTheme = $this->getOption('bootstrapTheme');
 		if (empty($bootstrapTheme) || $bootstrapTheme === 'bootstrap3') {
 			$this->addStyle('bootstrap', 'styles/bootstrap.less');
+	                $this->addStyle('iopn_stylesheet', 'styles/ugrj.css');
 			$this->modifyStyle('bootstrap', ['addLessVariables' => '@icon-font-path:"' . $iconFontPath . '";']);
 		} else {
 			$this->addStyle('bootstrapTheme-' . $bootstrapTheme, 'styles/' . $bootstrapTheme . '.less');
 			$this->modifyStyle('bootstrapTheme-' . $bootstrapTheme, ['addLessVariables' => '@icon-font-path:"' . $iconFontPath . '";']);
+                        $this->addStyle('iopn_stylesheet', 'styles/ugrj.css');
+
 		}
 
 		$locale = AppLocale::getLocale();
@@ -143,7 +146,7 @@ class BootstrapThreeThemePlugin extends ThemePlugin {
 	 * @return string
 	 */
 	function getDisplayName() {
-		return __('plugins.themes.bootstrap3.name');
+		return __('plugins.themes.iopnBootstrap.name');
 	}
 
 	/**
@@ -151,6 +154,6 @@ class BootstrapThreeThemePlugin extends ThemePlugin {
 	 * @return string
 	 */
 	function getDescription() {
-		return __('plugins.themes.bootstrap3.description');
+		return __('plugins.themes.iopnBootstrap.description');
 	}
 }
